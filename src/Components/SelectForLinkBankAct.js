@@ -1,10 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IoIosArrowBack } from 'react-icons/io'
 import { SiPhonepe } from 'react-icons/si'
 import { MdOutlineArrowRightAlt } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
+
+// let finvuClient;
+
 const SelectForLinkBankAct = () => {
+
     const navigate = useNavigate()
+    useEffect(() => {
+        getData();
+    },[])
+
+    const getData = async () => {
+        const fipid = "123"
+        const account = "1234"
+        try {
+        const res = await window.finvuClient.accountLinking(fipid,account);
+        console.log(res);
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
     return (
         <div className='p-4'>
             <div className='p-4'>
@@ -29,6 +48,8 @@ const SelectForLinkBankAct = () => {
                 <button onClick={()=>{navigate("/linkaccount")}}>CONTINUE </button>
                 <MdOutlineArrowRightAlt className="absolute right-5 bottom-1" size={'2rem'} />
             </div>
+       
+
         </div>
     )
 }

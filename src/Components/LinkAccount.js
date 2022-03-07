@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IoIosArrowBack } from 'react-icons/io'
 import { SiPhonepe } from 'react-icons/si'
 import { MdOutlineArrowRightAlt } from 'react-icons/md'
@@ -6,6 +6,19 @@ import { useNavigate } from 'react-router-dom'
 
 const LinkAccount = () => {
     const navigate=useNavigate()
+    useEffect(() => {
+        getData();
+    },[])
+
+    const getData = async () => {
+        try {
+        const res = await window.finvuClient.accountConfirmLinking();
+        console.log(res);
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
     return (
         <div className='p-4'>
             <div><IoIosArrowBack size={"1rem"} /></div>

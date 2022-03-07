@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IoIosArrowBack } from 'react-icons/io'
 import { SiPhonepe } from 'react-icons/si'
 import { MdOutlineArrowRightAlt } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
 const SelectAggActList = () => {
   const navigate = useNavigate()
+let finvuClient;
+  useEffect(() => {
+      getData();
+  },[])
+
+  const getData = async () => {
+      try {
+      const res = await finvuClient.userLinkAccount();
+      console.log(res);
+          
+      } catch (error) {
+          console.log(error)
+      }
+  }
+
   return (
     <div className='p-4'>
       <div><IoIosArrowBack size={"1rem"} /></div>
@@ -41,7 +56,7 @@ const SelectAggActList = () => {
         <p className="cantseebank">Cant see you bank in the list?</p>
       </div>
       <div className="buttoncontinue rounded-full flex text-white justify-center p-2 w-11/12">
-        <button onClick={()=>{navigate("/otp")}}>CONTINUE </button>
+        <button onClick={(  )=>{navigate("/otp")}}>CONTINUE </button>
         <MdOutlineArrowRightAlt className="absolute right-5 bottom-1" size={'2rem'} />
       </div>
     </div>

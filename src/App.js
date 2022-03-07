@@ -18,8 +18,8 @@ function App() {
         <Route path='linkaccount' element={<LinkAccount />} />
         <Route path='success' element={<ConsentAccepted />} />
         <Route path='failed' element={<AccountAggregatorFailed />} />
-        <Route path='details' element={<DetailsOfAccess />} />
         <Route path='select' element={<SelectForLinkBankAct />} />
+        <Route path='details' element={<DetailsOfAccess />} />
       </Routes>
     </BrowserRouter>
   );
