@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import SelectAggActList from './Components/SelectAggActList';
-import LinkAccount from './Components/LinkAccount';
+import SelectAggActList from './Components/ifNoAccountIslinked/SelectAggActList1';
+import EnterOtp from './Components/ifNoAccountIslinked/EnterOtp2';
+import SelectForLinkBankAct from './Components/ifNoAccountIslinked/SelectForLinkBankAct3'
+import LinkAccount from './Components/ifNoAccountIslinked/LinkAccount4';
+import EnterBankOtp from './Components/ifNoAccountIslinked/EnterOtp5';
+import ConsentAccepted from './Components/ifNoAccountIslinked/ConsentAccepted6'
+import AccountAggregatorFailed from './Components/ifNoAccountIslinked/AccountAggregatorFailed7'
 import { Route, Routes } from 'react-router-dom';
-import EnterOtp from './Components/EnterOtp';
-import DetailsOfAccess from './Components/DetailsOfAccess';
-import ConsentAccepted from './Components/ConsentAccepted'
-import AccountAggregatorFailed from './Components/AccountAggregatorFailed'
-import SelectForLinkBankAct from './Components/SelectForLinkBankAct'
+import DetailsOfAccess from './Components/DetailsOfAccess3';
+
 import { BrowserRouter } from 'react-router-dom';
 function App() {
   return (
@@ -15,10 +17,11 @@ function App() {
       <Routes>
         <Route path='/' element={<SelectAggActList />} />
         <Route path="otp" element={<EnterOtp />} />
+        <Route path='select' element={<SelectForLinkBankAct />} />
         <Route path='linkaccount' element={<LinkAccount />} />
+        <Route path="bankotp" element={<EnterBankOtp />} />
         <Route path='success' element={<ConsentAccepted />} />
         <Route path='failed' element={<AccountAggregatorFailed />} />
-        <Route path='select' element={<SelectForLinkBankAct />} />
         <Route path='details' element={<DetailsOfAccess />} />
       </Routes>
     </BrowserRouter>

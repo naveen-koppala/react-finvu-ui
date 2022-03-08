@@ -5,21 +5,20 @@ import { MdOutlineArrowRightAlt } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
 const SelectAggActList = () => {
   const navigate = useNavigate()
-let finvuClient;
-  useEffect(() => {
-      getData();
-  },[])
+ 
+   useEffect(() => {
+        getData();
+    },[])
 
-  const getData = async () => {
-      try {
-      const res = await finvuClient.userLinkAccount();
-      console.log(res);
-          
-      } catch (error) {
-          console.log(error)
-      }
-  }
-
+    const getData = async () => {
+        try {
+        const res = await window.finvuClient.userLinkedAccounts();
+        console.log(res);
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
   return (
     <div className='p-4'>
       <div><IoIosArrowBack size={"1rem"} /></div>
