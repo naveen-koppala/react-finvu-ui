@@ -1,6 +1,7 @@
 import React from 'react'
 import FailLogo from './assets/fail.svg'
 const AccountAggregatorFailed = () => {
+    localStorage.clear()
     return (
         <div className='my-40'>
             <img className='align-middle mx-auto' src={FailLogo} />

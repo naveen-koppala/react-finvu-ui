@@ -48,16 +48,16 @@ const NewBanksSelect = () => {
     ]
 
     const discoveryAccount = async (fipid) => {
-        console.log(fipid)
+        console.log("discoveryAccount", fipid)
         let identifiers = [
             {
                 "category": "STRONG",
                 "type": "MOBILE",
-                "value": localStorage.getItem('moblileno')
+                "value": localStorage.getItem('mobileNumber')
             }
         ]
         let res = await window.finvuClient.discoverAccounts(fipid, identifiers)
-        console.log(res, "newBanks")
+        console.log("discoverAccounts", res)
         if (res.status && res.status == "SUCCESS") {
             navigate(`/linkaccount/${fipid}`)
         } else {

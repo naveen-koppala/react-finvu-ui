@@ -31,7 +31,6 @@ padding: 8px;
   font-family: 'DM Sans';
 }
 .backgrou{
-  border: 1px solid #F9F8F8;
   background-color: #F9F8F8;
 }
 .cantseebank {
@@ -46,7 +45,12 @@ padding: 8px;
 }
 .buttoncontinue1{
   background-color: #2C64E3;
-  position: relative;
+  position: absolute;
+  /* bottom: 5px; */
+}
+.buttoncontinue2{
+  background-color: #658eee;
+  position: absolute;
   /* bottom: 5px; */
 }
 
@@ -67,7 +71,6 @@ padding: 8px;
 }
 
 .backgrou2{
-  border: 1px solid #F9F8F8;
   background-color: #F9F8F8;
 
 }
@@ -119,4 +122,14 @@ padding: 8px;
 }
 .h-full{
   height: 100vh;
+}
+
+.spin{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  backdrop-filter: blur(5px);
 }

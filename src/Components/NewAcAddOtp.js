@@ -33,7 +33,7 @@ const NewAcAddEnterOtp = () => {
         <input className='border p-2 rounded-lg w-4/6 mt-20' type="number" maxLength={6} onChange={(e) => { handleChange(e) }} />
       </div>
       <div className='flex justify-center'>
-        <div onClick={() => { sendOtpData() }} className="buttoncontinue rounded-full flex text-white justify-center p-2 w-11/12">
+        <div onClick={() => { sendOtpData() }} className="buttoncontinue1 rounded-full flex text-white justify-center p-2 w-11/12">
           <button>CONTINUE </button>
           <MdOutlineArrowRightAlt className="absolute right-5 bottom-1" size={'2rem'} />
         </div>

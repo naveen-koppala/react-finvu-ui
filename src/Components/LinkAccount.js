@@ -13,7 +13,7 @@ const LinkAccount = () => {
             {
                 "category": "STRONG",
                 "type": "MOBILE",
-                "value": localStorage.getItem('moblileno')
+                "value": localStorage.getItem('mobileNumber')
             }]
         let res = await window.finvuClient.discoverAccounts(fipid, identifiers)
         if (res.status && res.status == "SUCCESS") {
@@ -30,6 +30,7 @@ const LinkAccount = () => {
         const accounts = [ac]
         try {
             let res = await window.finvuClient.accountLinking(fi, accounts)
+            console.log("res", res)
             if (res.status && res.status == "SUCCESS") {
                 localStorage.setItem("RefNumber", res.RefNumber)
                 navigate(`/newacaddenterotp/${fipid}`)
@@ -74,7 +75,7 @@ const LinkAccount = () => {
                 })}
             </div>
             <div className='flex justify-center'>
-                <div onClick={() => { getData() }} className="buttoncontinue rounded-full flex text-white justify-center p-2 w-11/12">
+                <div onClick={() => { getData() }} className="buttoncontinue1 rounded-full flex text-white justify-center p-2 w-11/12">
                     <button>CONTINUE </button>
                     <MdOutlineArrowRightAlt className="absolute right-5 bottom-1" size={'2rem'} />
                 </div>
