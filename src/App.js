@@ -1,6 +1,5 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import 'react-toastify/dist/ReactToastify.css'
 import EnterOtp from './Components/EnterOtp';
 import LinkAccount from './Components/LinkAccount';
 import EnterBankOtp from './Components/NewAcAddOtp';
