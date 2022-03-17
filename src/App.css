@@ -42,7 +42,12 @@ padding: 8px;
 .buttoncontinue{
   background-color: #2C64E3;
   position: absolute;
-  bottom: 30px;
+  /* bottom: 30px; */
+}
+.buttoncontinue1{
+  background-color: #2C64E3;
+  position: relative;
+  /* bottom: 5px; */
 }
 
 .detailacch{
@@ -65,4 +70,53 @@ padding: 8px;
   border: 1px solid #F9F8F8;
   background-color: #F9F8F8;
 
+}
+
+.finvubank{
+  height: 30px;
+  width: 30px;
+}
+
+.indusindbank{
+  height: 40px;
+  width: 40px;
+}
+
+
+.indusindbankfont{
+  font-size: 12px;
+}
+
+.bajajfinserv{
+  height: 50px;
+  width: 30px;
+}
+
+.hdfcbank{
+  margin-top: 10px;
+  height: 20px;
+  width: 90px;
+}
+.idfcbank{
+  height: 27px;
+  width: 75px;
+}
+.federalbank{
+  height: 30px;
+  width: 85px;
+}
+.axisbank{
+  height: 30px;
+  width: 85px;
+}
+.kotakbank{
+  height: 40px;
+  width: 40px;
+}
+.sbibank{
+  height: 80px;
+  width: 80px;
+}
+.h-full{
+  height: 100vh;
 }

@@ -1,28 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
-import SelectAggActList from './Components/ifNoAccountIslinked/SelectAggActList1';
-import EnterOtp from './Components/ifNoAccountIslinked/EnterOtp2';
-import SelectForLinkBankAct from './Components/ifNoAccountIslinked/SelectForLinkBankAct3'
-import LinkAccount from './Components/ifNoAccountIslinked/LinkAccount4';
-import EnterBankOtp from './Components/ifNoAccountIslinked/EnterOtp5';
-import ConsentAccepted from './Components/ifNoAccountIslinked/ConsentAccepted6'
-import AccountAggregatorFailed from './Components/ifNoAccountIslinked/AccountAggregatorFailed7'
 import { Route, Routes } from 'react-router-dom';
-import DetailsOfAccess from './Components/DetailsOfAccess3';
-
+import 'react-toastify/dist/ReactToastify.css'
+import EnterOtp from './Components/EnterOtp';
+import LinkAccount from './Components/LinkAccount';
+import EnterBankOtp from './Components/NewAcAddOtp';
+import ConsentAccepted from './Components/ConsentAccepted'
+import AccountAggregatorFailed from './Components/AccountAggregatorFailed'
+import DetailsOfAccess from './Components/DetailsOfAccess';
+import NewBanksSelect from './Components/NewBanksSelect';
+import  NewAcAddEnterOtp from './Components/NewAcAddOtp'
+import ConsentRequestEncrypt from './Components/ConsentRequestEncrypt'
 import { BrowserRouter } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<SelectAggActList />} />
-        <Route path="otp" element={<EnterOtp />} />
-        <Route path='select' element={<SelectForLinkBankAct />} />
-        <Route path='linkaccount' element={<LinkAccount />} />
+        <Route path='/' element={<ConsentRequestEncrypt />} />
+        <Route path="otp/:name" element={<EnterOtp />} />
+        <Route path='linkaccount/:fipid' element={<LinkAccount />} />
         <Route path="bankotp" element={<EnterBankOtp />} />
+        <Route path='details' element={<DetailsOfAccess />} />
+        <Route path='newbanksselect' element={<NewBanksSelect />} />
+        <Route path='newacaddenterotp/:name' element={<NewAcAddEnterOtp />} />
         <Route path='success' element={<ConsentAccepted />} />
         <Route path='failed' element={<AccountAggregatorFailed />} />
-        <Route path='details' element={<DetailsOfAccess />} />
       </Routes>
     </BrowserRouter>
   );
